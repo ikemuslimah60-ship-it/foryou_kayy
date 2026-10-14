@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Special Letter for Kayla 🌸✨</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Caveat:wght@600&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <title>Special Letter for Kayla - Mini Zoo Edition 🦁🦜</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Caveat:wght@600&family=Poppins:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -14,18 +14,18 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 50%, #ffc3a0 100%);
+      background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 50%, #43e97b 100%);
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
-      color: #4a2e35;
+      color: #2c4a3e;
       position: relative;
     }
 
-    /* Kelopak Bunga Sakura Berguguran */
-    .sakura-container {
+    /* Container Mini Zoo */
+    .zoo-container {
       position: absolute;
       top: 0;
       left: 0;
@@ -33,48 +33,80 @@
       height: 100%;
       z-index: 1;
       pointer-events: none;
+      overflow: hidden;
     }
 
-    .petal {
+    /* Burung Terbang Besar */
+    .bird {
       position: absolute;
-      background: linear-gradient(135deg, #ffb7c5, #ff69b4);
-      border-radius: 150% 0 150% 0;
-      opacity: 0.7;
-      animation: fall linear infinite;
+      font-size: 45px;
+      animation: fly linear infinite;
+      opacity: 0.9;
     }
 
-    @keyframes fall {
+    @keyframes fly {
       0% {
-        top: -10%;
-        transform: translateX(0) rotate(0deg);
+        transform: translate(-60px, 80px) scale(0.9);
+      }
+      50% {
+        transform: translate(50vw, 20px) scale(1.1);
       }
       100% {
-        top: 110%;
-        transform: translateX(100px) rotate(360deg);
+        transform: translate(105vw, 100px) scale(1);
       }
     }
 
-    /* Kartu Utama */
+    /* Hewan Berjalan Besar */
+    .walking-animal {
+      position: absolute;
+      bottom: 15px;
+      font-size: 70px;
+      animation: walk linear infinite;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+    }
+
+    @keyframes walk {
+      0% {
+        left: -100px;
+        transform: scaleX(1);
+      }
+      49% {
+        transform: scaleX(1);
+      }
+      50% {
+        left: 105vw;
+        transform: scaleX(-1);
+      }
+      99% {
+        transform: scaleX(-1);
+      }
+      100% {
+        left: -100px;
+        transform: scaleX(1);
+      }
+    }
+
+    /* Kartu Utama Surat */
     .card-container {
       position: relative;
       z-index: 10;
       width: 90%;
       max-width: 480px;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 2px solid rgba(255, 255, 255, 0.6);
+      border: 3px solid rgba(120, 255, 214, 0.8);
       border-radius: 25px;
-      padding: 25px 22px;
-      box-shadow: 0 15px 35px rgba(214, 90, 115, 0.25), 0 0 20px rgba(255, 255, 255, 0.5);
+      padding: 30px 22px;
+      box-shadow: 0 15px 35px rgba(44, 74, 62, 0.25), 0 0 20px rgba(255, 255, 255, 0.6);
       text-align: center;
       transition: all 0.4s ease;
     }
 
     .header-title {
-      font-family: 'Dancing Script', cursive;
-      font-size: 2.5rem;
-      color: #d6336c;
+      font-family: 'Fredoka', cursive;
+      font-size: 2.3rem;
+      color: #1b4d3e;
       margin-bottom: 5px;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
@@ -82,45 +114,30 @@
     .page-indicator {
       font-size: 0.8rem;
       font-weight: 600;
-      color: #b05270;
-      margin-bottom: 15px;
+      color: #3b7a57;
+      margin-bottom: 20px;
       letter-spacing: 2px;
       text-transform: uppercase;
     }
 
     .content-box {
-      min-height: 220px;
+      min-height: 240px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       padding: 0 5px;
       animation: fadeIn 0.6s ease;
     }
 
     .letter-text {
       font-family: 'Caveat', cursive;
-      font-size: 1.55rem;
+      font-size: 1.75rem;
       line-height: 1.5;
-      color: #5c2c3b;
+      color: #2d4a3e;
       text-align: center;
       font-weight: 600;
-    }
-
-    .photo-frame {
-      width: 100%;
-      max-height: 240px;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 4px solid #ffffff;
-      box-shadow: 0 8px 20px rgba(214, 90, 115, 0.2);
-      margin-bottom: 12px;
-      transition: transform 0.3s ease;
-    }
-
-    .photo-frame:hover {
-      transform: scale(1.02);
     }
 
     @keyframes fadeIn {
@@ -145,137 +162,87 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(214, 90, 115, 0.2);
+      box-shadow: 0 4px 12px rgba(44, 74, 62, 0.2);
     }
 
     .btn-next {
-      background: linear-gradient(135deg, #ff758c, #ff7eb3);
-      color: #ffffff;
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      color: #1b4d3e;
     }
 
     .btn-next:hover {
-      background: linear-gradient(135deg, #ff5277, #ff639e);
+      background: linear-gradient(135deg, #2ecc71, #26af94);
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(255, 117, 140, 0.4);
+      color: #ffffff;
     }
 
     .btn-prev {
-      background: rgba(255, 255, 255, 0.7);
-      color: #b05270;
-      border: 1px solid rgba(214, 90, 115, 0.3);
+      background: rgba(255, 255, 255, 0.8);
+      color: #3b7a57;
+      border: 1px solid rgba(67, 233, 123, 0.4);
     }
 
     .btn-prev:hover {
       background: #ffffff;
-      color: #d6336c;
+      color: #1b4d3e;
     }
 
     button:disabled {
       opacity: 0.35;
       cursor: not-allowed;
       transform: none !important;
-      box-shadow: none !important;
     }
   </style>
 </head>
 <body>
 
-  <!-- Efek Kelopak Bunga Sakura -->
-  <div class="sakura-container" id="sakuraContainer"></div>
+  <!-- Animasi Hewan & Burung Mini Zoo -->
+  <div class="zoo-container" id="zooContainer"></div>
 
   <!-- Kartu Surat -->
   <div class="card-container">
-    <div class="header-title">Untuk Kayla 🌸✨</div>
+    <div class="header-title">Mini Zoo Kayla 🦁🌿</div>
     <div class="page-indicator" id="pageIndicator">HALAMAN 1 DARI 10</div>
     
-    <div class="content-box" id="letterContent">
-      <!-- Isi teks dan foto akan diisi via JS -->
-    </div>
+    <div class="content-box" id="letterContent"></div>
 
     <div class="btn-group">
       <button class="btn-prev" id="prevBtn" onclick="prevPage()" disabled>Kembali</button>
-      <button class="btn-next" id="nextBtn" onclick="nextPage()">Lanjut 🌸</button>
+      <button class="btn-next" id="nextBtn" onclick="nextPage()">Lanjut 🌿</button>
     </div>
   </div>
 
   <script>
-    // Data 10 Halaman Surat & Letak Foto Kebersamaan
+    // Hanya Teks Surat Tanpa Foto
     const pages = [
-      {
-        text: "Assalamualaikum Kaylaa🤗🤗!!.. Ini aku buat khusus buatmuu😊😊.. dibacaa yaaa Kayy..",
-        img: "foto1.jpg"
-      },
-      {
-        text: "Aloo udahh masuk yaa, okee… udahh gak sabar yaa baca isi suratt darii Ikeee hahayyy🤪🤪…, oke deh silahkan Kayla tekan tombol lanjutt yaa…. selamat membacaa😘😘…",
-        img: null
-      },
-      {
-        text: "Kaylaaa…, disini Ike yang pertama mau bilang maaf ke Kayla… soalnya Ike masih belum bisa jadi teman yang baik dan Ike juga gak selalu bisa ngertiin perasaan Kayla.. ya kurang peka lah istilahnya, mwehehe 🤭🤭",
-        img: null
-      },
-      {
-        text: "Dirimu tau enggak??.., kalo Ike ngelakuin kesalahan dan yang kamu kira aku tuh biasa aja gak punya rasa bersalah sama sekali.., tebakanmu salah banget! Aku tuh mikir aku juga manusiaa yang lucu kan emoettszz xixi.., mau berusaha takut kamunya tambah marah…, mencobanya ehh beneran makin marah.., yaudah aku milih diem ajhaaa yak kan yaa.., hehe 🙃",
-        img: "foto2.jpg"
-      },
-      {
-        text: "Emm iya dehh aku akui aku tuh orangnya nyebelin iyaa kan? Hadehh yaudaa lah yaa, kamu juga nyebelinn tauu enggak sihh sama aja kayak aku…, udahh yaa saling ngaca ajhaa kita berdua itu kalo lagi brantem itu nyebelinnya minta ampun dehh.. #pusying 🤯🤯",
-        img: null
-      },
-      {
-        text: "Ayo kita berdua saling memahami diri kita masing-masing, saling menghargai pendapat, jangan gegabah yaa.. supaya diantara kita berdua tidak menimbulkan pertengkaran lagi… 😘😘",
-        img: null
-      },
-      {
-        text: "Mari kita berdua saling memperbaiki diri masing-masing yaaa.., supaya pertemanan kita selaluuu Bahagia.. 😇",
-        img: null
-      },
-      {
-        text: "Tau enggak sihh Kayy dirimu ituu jujurlyy nyebelennn banget kalo lagi gak mood 😭😭 kadang bikin emosi, kadang bikin ketawa, tapi kaloo kamu enggak ada malah berasa ada yang kurang nii jujur yaa. Dasar manusia aneh..,",
-        img: "foto3.jpg"
-      },
-      {
-        text: "Kaylaa emoett.., jangan pernah berubah yaa.., Tetap jadi orang baikk, tetap jadi temannya Ike. Oiyaa Kayy, jangan sombong yaa kalo nanti kita udah sukses, ya. Ingat, kita pernah jadi dua manusia nggak jelas yang ketawa karena hal aneh. Kalo kamu lupa aku, awas aja, aku bakal datang di mimpimu buat nagih pertemanan 😭🤣",
-        img: null
-      },
-      {
-        text: "Kalo suatu hari nanti kita udah jarang ketemu lagii, jangan lupaa sama aku yaa Kayy.., aku mungkin bukan teman yang paling sempurna, tapi aku harap aku pernah jadi salah satu alasan untuk tersenyum, walaupun seringnya aku juga alasan kamu pengin mukul bantal, xixixi.. 🤣…. makasih udah jadi teman terbaiknya Ike selama ini Kayla… ❤️✨",
-        img: "foto4.jpg"
-      }
+      "Assalamualaikum Kaylaa🤗🤗!!.. Ini aku buat khusus buatmuu😊😊.. dibacaa yaaa Kayy..",
+      "Aloo udahh masuk yaa, okee… udahh gak sabar yaa baca isi suratt darii Ikeee hahayyy🤪🤪…, oke deh silahkan Kayla tekan tombol lanjutt yaa…. selamat membacaa😘😘…",
+      "Kaylaaa…, disini Ike yang pertama mau bilang maaf ke Kayla… soalnya Ike masih belum bisa jadi teman yang baik dan Ike juga gak selalu bisa ngertiin perasaan Kayla.. ya kurang peka lah istilahnya, mwehehe 🤭🤭",
+      "Dirimu tau enggak??.., kalo Ike ngelakuin kesalahan dan yang kamu kira aku tuh biasa aja gak punya rasa bersalah sama sekali.., tebakanmu salah banget! Aku tuh mikir aku juga manusiaa yang lucu kan emoettszz xixi.., mau berusaha takut kamunya tambah marah…, mencobanya ehh beneran makin marah.., yaudah aku milih diem ajhaaa yak kan yaa.., hehe 🙃",
+      "Emm iya dehh aku akui aku tuh orangnya nyebelin iyaa kan? Hadehh yaudaa lah yaa, kamu juga nyebelinn tauu enggak sihh sama aja kayak aku…, udahh yaa saling ngaca ajhaa kita berdua itu kalo lagi brantem itu nyebelinnya minta ampun dehh.. #pusying 🤯🤯",
+      "Ayo kita berdua saling memahami diri kita masing-masing, saling menghargai pendapat, jangan gegabah yaa.. supaya diantara kita berdua tidak menimbulkan pertengkaran lagi… 😘😘",
+      "Mari kita berdua saling memperbaiki diri masing-masing yaaa.., supaya pertemanan kita selaluuu Bahagia.. 😇",
+      "Tau enggak sihh Kayy dirimu ituu jujurlyy nyebelennn banget kalo lagi gak mood 😭😭 kadang bikin emosi, kadang bikin ketawa, tapi kaloo kamu enggak ada malah berasa ada yang kurang nii jujur yaa. Dasar manusia aneh..,",
+      "Kaylaa emoett.., jangan pernah berubah yaa.., Tetap jadi orang baikk, tetap jadi temannya Ike. Oiyaa Kayy, jangan sombong yaa kalo nanti kita udah sukses, ya. Ingat, kita pernah jadi dua manusia nggak jelas yang ketawa karena hal aneh. Kalo kamu lupa aku, awas aja, aku bakal datang di mimpimu buat nagih pertemanan 😭🤣",
+      "Kalo suatu hari nanti kita udah jarang ketemu lagii, jangan lupaa sama aku yaa Kayy.., aku mungkin bukan teman yang paling sempurna, tapi aku harap aku pernah jadi salah satu alasan untuk tersenyum, walaupun seringnya aku juga alasan kamu pengin mukul bantal, xixixi.. 🤣…. makasih udah jadi teman terbaiknya Ike selama ini Kayla… ❤️✨"
     ];
 
     let currentPage = 0;
-
     const letterContent = document.getElementById('letterContent');
     const pageIndicator = document.getElementById('pageIndicator');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
     function updateCard() {
-      // Efek Fade In Teks
       letterContent.style.animation = 'none';
-      letterContent.offsetHeight; // trigger reflow
+      letterContent.offsetHeight;
       letterContent.style.animation = 'fadeIn 0.6s ease';
 
-      const data = pages[currentPage];
-      let htmlOutput = '';
+      letterContent.innerHTML = `<div class="letter-text">${pages[currentPage]}</div>`;
 
-      if (data.img) {
-        htmlOutput += `<img src="${data.img}" alt="Foto Kebersamaan" class="photo-frame">`;
-      }
-
-      htmlOutput += `<div class="letter-text">${data.text}</div>`;
-
-      letterContent.innerHTML = htmlOutput;
       pageIndicator.innerText = `HALAMAN ${currentPage + 1} DARI ${pages.length}`;
-
-      // Status Tombol Navigasi
       prevBtn.disabled = currentPage === 0;
-
-      if (currentPage === pages.length - 1) {
-        nextBtn.innerText = "Selesai 💖";
-      } else {
-        nextBtn.innerText = "Lanjut 🌸";
-      }
+      nextBtn.innerText = (currentPage === pages.length - 1) ? "Selesai 💖" : "Lanjut 🌿";
     }
 
     function nextPage() {
@@ -283,7 +250,7 @@
         currentPage++;
         updateCard();
       } else {
-        alert("Terima kasih sudah membaca surat ini sampai habis, Kayla! Sayang kamu selalu 💕");
+        alert("Terima kasih sudah membaca surat Mini Zoo ini sampai habis, Kayla! Sayang kamu selalu 💕");
       }
     }
 
@@ -294,30 +261,32 @@
       }
     }
 
-    // Efek Bunga Sakura Jatuh
-    function createSakura() {
-      const container = document.getElementById('sakuraContainer');
-      const count = 35;
+    function createMiniZoo() {
+      const container = document.getElementById('zooContainer');
+      const birdsList = ['🕊️', '🦜', '🦢', '🦅'];
+      const animalsList = ['🦒', '🐘', '🐅', '🦓', '🐇', '🦘', '🦛', '🦁'];
 
-      for (let i = 0; i < count; i++) {
-        const petal = document.createElement('div');
-        petal.classList.add('petal');
-        
-        const size = Math.random() * 12 + 8;
-        petal.style.width = `${size}px`;
-        petal.style.height = `${size + 5}px`;
-        
-        petal.style.left = `${Math.random() * 100}%`;
-        
-        petal.style.animationDuration = `${Math.random() * 5 + 5}s`;
-        petal.style.animationDelay = `${Math.random() * 5}s`;
+      for (let i = 0; i < 5; i++) {
+        const bird = document.createElement('div');
+        bird.classList.add('bird');
+        bird.innerText = birdsList[Math.floor(Math.random() * birdsList.length)];
+        bird.style.top = `${Math.random() * 35}%`;
+        bird.style.animationDuration = `${Math.random() * 7 + 7}s`;
+        bird.style.animationDelay = `${Math.random() * 4}s`;
+        container.appendChild(bird);
+      }
 
-        container.appendChild(petal);
+      for (let i = 0; i < 4; i++) {
+        const animal = document.createElement('div');
+        animal.classList.add('walking-animal');
+        animal.innerText = animalsList[Math.floor(Math.random() * animalsList.length)];
+        animal.style.animationDuration = `${Math.random() * 10 + 10}s`;
+        animal.style.animationDelay = `${Math.random() * 5}s`;
+        container.appendChild(animal);
       }
     }
 
-    // Jalankan awal
-    createSakura();
+    createMiniZoo();
     updateCard();
   </script>
 </body>
